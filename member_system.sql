@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `content` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table member_system.content: ~4 rows (approximately)
+-- Dumping data for table member_system.content: ~23 rows (approximately)
 /*!40000 ALTER TABLE `content` DISABLE KEYS */;
 INSERT INTO `content` (`id`, `title`, `type`, `body`) VALUES
 	(1, 'Artikel 1', 'article', 'Isi artikel 1 : Lorem ipsum dolor sit amet is placeholder text commonly used in design, printing, and web development to showcase graphic elements, such as fonts or layout, without using meaningful content. Originating from a scrambled 45 B.C. Latin text by Cicero, it serves to focus attention on visual, '),
@@ -41,17 +41,17 @@ INSERT INTO `content` (`id`, `title`, `type`, `body`) VALUES
 	(10, 'Artikel 10', 'article', 'Isi artikel 10 : Lorem ipsum dolor sit amet is placeholder text commonly used in design, printing, and web development to showcase graphic elements, such as fonts or layout, without using meaningful content. Originating from a scrambled 45 B.C. Latin text by Cicero, it serves to focus attention on visual, '),
 	(11, 'Artikel 11', 'article', 'Isi artikel 11 : Lorem ipsum dolor sit amet is placeholder text commonly used in design, printing, and web development to showcase graphic elements, such as fonts or layout, without using meaningful content. Originating from a scrambled 45 B.C. Latin text by Cicero, it serves to focus attention on visual, '),
 	(12, 'Artikel 12', 'article', 'Isi artikel 12 : Lorem ipsum dolor sit amet is placeholder text commonly used in design, printing, and web development to showcase graphic elements, such as fonts or layout, without using meaningful content. Originating from a scrambled 45 B.C. Latin text by Cicero, it serves to focus attention on visual, '),
-	(13, 'Video 1', 'video', NULL),
-	(14, 'Video 2', 'video', NULL),
-	(15, 'Video 3', 'video', NULL),
-	(16, 'Video 4', 'video', NULL),
-	(17, 'Video 5', 'video', NULL),
-	(18, 'Video 6', 'video', NULL),
-	(19, 'Video 7', 'video', NULL),
-	(20, 'Video 8', 'video', NULL),
-	(21, 'Video 9', 'video', NULL),
-	(22, 'Video 10', 'video', NULL),
-	(23, 'Video 11', NULL, NULL);
+	(13, 'Video 1', 'video', 'https://www.youtube.com/watch?v=75aBKInkybs&list=RDMM75aBKInkybs&start_radio=1'),
+	(14, 'Video 2', 'video', 'https://www.youtube.com/watch?v=YLiRgeU7fQw&list=RDMM75aBKInkybs&index=2'),
+	(15, 'Video 3', 'video', 'https://www.youtube.com/watch?v=b41k1t-JRwU&list=RDMM75aBKInkybs&index=3'),
+	(16, 'Video 4', 'video', 'https://www.youtube.com/watch?v=jMaRpFm_RNk&list=RDMM75aBKInkybs&index=4'),
+	(17, 'Video 5', 'video', 'https://www.youtube.com/watch?v=yIPX-FNJ9qk&list=RDMM75aBKInkybs&index=5'),
+	(18, 'Video 6', 'video', 'https://www.youtube.com/watch?v=RUi54JTgL5s&list=RDMM75aBKInkybs&index=6'),
+	(19, 'Video 7', 'video', 'https://www.youtube.com/watch?v=r0U0AlLVqpk&list=RDRUi54JTgL5s&index=2'),
+	(20, 'Video 8', 'video', 'https://www.youtube.com/watch?v=iAP9AF6DCu4&list=RDRUi54JTgL5s&index=5'),
+	(21, 'Video 9', 'video', 'https://www.youtube.com/watch?v=CSvFpBOe8eY&list=RDRUi54JTgL5s&index=6'),
+	(22, 'Video 10', 'video', 'https://www.youtube.com/watch?v=S9bCLPwzSC0&list=RDRUi54JTgL5s&index=18'),
+	(23, 'Video 11', 'video', 'https://www.youtube.com/watch?v=S9bCLPwzSC0&list=RDRUi54JTgL5s&index=18');
 /*!40000 ALTER TABLE `content` ENABLE KEYS */;
 
 -- Dumping structure for table member_system.membership_types
@@ -86,10 +86,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`membership_id`) REFERENCES `membership_types` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table member_system.users: ~1 rows (approximately)
+-- Dumping data for table member_system.users: ~3 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `oauth_provider`, `oauth_id`, `membership_id`) VALUES
-	(1, 'rizal noer hamdan', 'rizalnoerhamdan.jtkpolban2010@gmail.com', NULL, 'google', '111958954665365620345', 1);
+	(1, 'rizal noer hamdan', 'rizalnoerhamdan.jtkpolban2010@gmail.com', NULL, 'google', '111958954665365620345', 1),
+	(5, 'Rizal Noer Hamdan', 'rizal.noerhamdan42@gmail.com', '', 'google', '111788260737136137810', 1),
+	(6, 'Rayhan Noer Alfarizi', 'rayhan.noeralfarizi@gmail.com', '$2y$10$uuy4hHBUQk.zsNb6JuCxHugcmgT/iaANX7fEnrkHUPjmqIHgxoj0e', 'manual', NULL, 2);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

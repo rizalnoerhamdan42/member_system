@@ -5,7 +5,7 @@
 
 ## 📝 Deskripsi
 Aplikasi berbasis web yang digunakan untuk menampilkan artikel dan video materi untuk user yang telah terdaftar di database sistem ini. Di dalam file proyek ini, saya sudah menyediakan databasenya member_system.sql sehingga bisa diimport ke database. Sudah menggunakan  Client ID dan Secret Google dan FaceBook. Jumlah artikel dan video materi bergantung pada jenis keanggotaan user, yaitu :
-*	1. default jenis keanggotaan (membership_types) ketika pertama kali registrasi-login menggunakan google adalah Tipe A
+*	1. default jenis keanggotaan (membership_types) user ketika pertama kali registrasi menggunakan google adalah Tipe A jika melakukan registrasi menggunakan akun Google atau Facebook. Jika user melakukan registrasi secara manual maka jenis keanggotaan (membership_types) user tersebut adalah Tipe B.
 *	2. 1 username (email) untuk 1 orang
  
 
