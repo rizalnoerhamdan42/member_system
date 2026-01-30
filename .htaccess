@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /member_system/
+
+# JANGAN REWRITE jika file atau folder fisik memang ada
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Baru sisanya lempar ke index.php
+RewriteRule ^(.*)$ index.php?page=$1 [L,QSA]
